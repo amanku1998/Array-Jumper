@@ -1,7 +1,5 @@
 #pragma once
 #include "../../header/UI/UIElement/ImageView.h"
-using namespace UI;
-using namespace UIElement;
 
 namespace Player
 {
@@ -10,8 +8,9 @@ namespace Player
 	class PlayerView{
 
 	private:
-		ImageView* player_image;
 		sf::RenderWindow* game_window;				//Use renderer window to calculate the player's position.
+		PlayerController* player_controller;
+		UI::UIElement::ImageView* player_image;
 
 		float player_height;
 		float player_width;
@@ -24,7 +23,7 @@ namespace Player
 		sf::Vector2f calulcatePlayerPosition();
 
 	public:
-		PlayerView();
+		PlayerView(PlayerController* controller);
 		~PlayerView();
 
 		void initialize();

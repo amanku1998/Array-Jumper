@@ -15,11 +15,13 @@ namespace Player
 
 	public:
 
-		int GetCurrentPosition();
-		void SetCurrentPosition(int new_position);
+		void initialize();
 
-		PlayerState GetPlayerState();
-		void SetPlayerState(PlayerState state);
+		int getCurrentPosition();
+		void setCurrentPosition(int new_position);
+
+		PlayerState getPlayerState();
+		void setPlayerState(PlayerState state);
 	};
 
 }

@@ -2,19 +2,22 @@
 
 namespace Player
 {
-	int PlayerModel::GetCurrentPosition() {
+	void  PlayerModel::initialize() {}
+
+	int PlayerModel::getCurrentPosition() {
 		return current_position;
 	}
 
-	void PlayerModel::SetCurrentPosition(int new_position) {
+	void PlayerModel::setCurrentPosition(int new_position) {
 		current_position = new_position;
 	}
 
-	PlayerState PlayerModel::GetPlayerState() {
+	PlayerState PlayerModel::getPlayerState() {
 		return player_state;
 	}
 
-	void PlayerModel::SetPlayerState(PlayerState new_player_state) {
+	void PlayerModel::setPlayerState(PlayerState new_player_state) {
 		player_state = new_player_state;
 	}
+
 }
