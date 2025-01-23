@@ -2,11 +2,11 @@
 //#include "../../header/Level/LevelModel.h"
 //#include "../../header/Level/LevelView.h"
 #include "LevelModel.h"
+//#include "BlockType.h"
 
 namespace Level
 {
 	class LevelView;
-	class LevelModel;
 
 	class LevelController {
 	private:
@@ -19,6 +19,8 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
+
+		BlockType getCurrentBoxValue(int currentPosition);
 	};
 
 }
