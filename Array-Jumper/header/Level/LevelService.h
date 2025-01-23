@@ -1,9 +1,12 @@
 #pragma once
 //#include "../../header/Level/LevelController.h"
 
+//#include "BlockType.h"
+
 namespace Level
 {
 	class LevelController;
+	struct BoxDimensions;
 
 	class LevelService
 	{
@@ -18,6 +21,8 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
+
+		BoxDimensions getBoxDimensions();
 	};
 
 }

@@ -1,4 +1,5 @@
 #pragma once
+#include "../../header/Level/LevelModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
 namespace Player
@@ -14,6 +15,7 @@ namespace Player
 
 		float player_height;
 		float player_width;
+		Level::BoxDimensions current_box_dimensions;
 
 		void initializePlayerImage();	//Initialize player_image 
 		void drawPlayer();				//Called every frame to render the sprite on the screen

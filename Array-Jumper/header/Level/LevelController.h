@@ -4,6 +4,7 @@
 namespace Level
 {
 	class LevelView;
+	//class LevelModel;
 
 	class LevelController {
 	private:
@@ -19,6 +20,7 @@ namespace Level
 		void render();
 
 		BlockType getCurrentBoxValue(int currentPosition);
+		BoxDimensions getBoxDimensions();
 	};
 
 }

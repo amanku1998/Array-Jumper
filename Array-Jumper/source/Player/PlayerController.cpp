@@ -44,6 +44,11 @@ namespace Player
 		player_model->setPlayerState(new_player_state);
 	}
 
+	int PlayerController::getCurrentPosition()
+	{
+		return player_model->getCurrentPosition();
+	}
+
 	void PlayerController::destroy()
 	{
 		delete(player_model);
