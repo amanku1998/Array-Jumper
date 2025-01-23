@@ -1,8 +1,5 @@
 #pragma once
-//#include "../../header/Level/LevelModel.h"
-//#include "../../header/Level/LevelView.h"
 #include "LevelModel.h"
-//#include "BlockType.h"
 
 namespace Level
 {
@@ -12,6 +9,7 @@ namespace Level
 	private:
 		LevelModel* level_model;
 		LevelView* level_view;
+
 	public:
 		LevelController();
 		~LevelController();
