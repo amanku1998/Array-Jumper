@@ -145,6 +145,11 @@ namespace Player
 		ServiceLocator::getInstance()->getGameplayService()->onPositionChanged(targetPosition);
 	}
 
+	void PlayerController::resetPlayer()
+	{
+		player_model->resetPlayer();
+	}
+
 	void PlayerController::takeDamage()
 	{
 		player_model->resetPlayer();
