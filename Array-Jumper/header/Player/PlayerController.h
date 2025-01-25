@@ -42,7 +42,7 @@ namespace Player
 		int getCurrentPosition();
 		void readInput();
 		void jump(MovementDirection direction);
-
+		void takeDamage();
 	};
 
 }

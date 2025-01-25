@@ -37,4 +37,8 @@ namespace Player
 		}
 	}
 
+	void PlayerService::takeDamage()
+	{
+		player_controller->takeDamage();
+	}
 }

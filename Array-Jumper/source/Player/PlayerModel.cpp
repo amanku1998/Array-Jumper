@@ -20,4 +20,10 @@ namespace Player
 		player_state = new_player_state;
 	}
 
+	void PlayerModel::resetPlayer()
+	{
+		current_position = 0;
+		player_state = PlayerState::ALIVE;
+	}
+
 }

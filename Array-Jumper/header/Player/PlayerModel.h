@@ -22,6 +22,7 @@ namespace Player
 
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState state);
+		void resetPlayer();
 	};
 
 }
