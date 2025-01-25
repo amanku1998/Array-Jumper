@@ -1,9 +1,12 @@
 #pragma once
 //#include"../../header/Player/PlayerModel.h"
-//#include"../../header/Player/PlayerView.h"
+#include"../../header/Player/MovementDirection.h"
+#include"../../header/Event/EventService.h"
 
 namespace Player
 {
+	using namespace Event;
+
 	class PlayerView;
 	class PlayerModel;
 	enum class PlayerState;
@@ -14,6 +17,8 @@ namespace Player
 
 		PlayerModel* player_model;
 		PlayerView* player_view;
+
+		EventService* event_service;
 
 		void destroy();
 
@@ -27,8 +32,11 @@ namespace Player
 
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
+		void move(MovementDirection direction);
+		bool isPositionInBound(int targetPosition);
 
 		int getCurrentPosition();
+		void readInput();
 	};
 
 }
