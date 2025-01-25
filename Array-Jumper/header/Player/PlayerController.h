@@ -2,10 +2,13 @@
 //#include"../../header/Player/PlayerModel.h"
 #include"../../header/Player/MovementDirection.h"
 #include"../../header/Event/EventService.h"
+#include"../../header/Level/BlockType.h"
+#include"../../header/Level/LevelModel.h"
 
 namespace Player
 {
 	using namespace Event;
+	using namespace Level;
 
 	class PlayerView;
 	class PlayerModel;
@@ -19,6 +22,7 @@ namespace Player
 		PlayerView* player_view;
 
 		EventService* event_service;
+		LevelModel current_level_data; // Assumes this is already defined
 
 		void destroy();
 
@@ -37,6 +41,8 @@ namespace Player
 
 		int getCurrentPosition();
 		void readInput();
+		void jump(MovementDirection direction);
+
 	};
 
 }
