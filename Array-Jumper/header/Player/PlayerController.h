@@ -45,6 +45,9 @@ namespace Player
 
 		void resetPlayer();
 		void takeDamage();
+
+		int getCurrentLives();
+		void onDeath();
 	};
 
 }

@@ -1,10 +1,12 @@
 #include "../../header/Gameplay/GameplayController.h"
 #include "../../header/Global/ServiceLocator.h"
+#include "../../header/Main/GameService.h"
 
 namespace Gameplay
 {
 	using namespace Global;
 	using namespace Sound;
+	using namespace Main;
 
 	void GameplayController::initialize() {}
 	void GameplayController::update() {}
@@ -45,5 +47,16 @@ namespace Gameplay
 		if (value == BlockType::TARGET)
 			return true;
 		return false;
+	}
+
+	void GameplayController::gameOver()
+	{
+		GameService::setGameState(GameState::CREDITS);
+		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::DEATH);
+	}
+
+	void GameplayController::onDeath()
+	{
+		gameOver();
 	}
 }

@@ -36,4 +36,9 @@ namespace Gameplay
 	{
 		delete(gameplay_controller);
 	}
+
+	void GameplayService::onDeath()
+	{
+		gameplay_controller->onDeath();
+	}
 }

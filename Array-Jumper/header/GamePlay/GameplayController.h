@@ -20,5 +20,7 @@ namespace Gameplay
 		void onPositionChanged(int position);
 		bool isObstacle(BlockType value);
 		bool isEndBlock(Level::BlockType value);
+		void gameOver();
+		void onDeath();
 	};
 }
