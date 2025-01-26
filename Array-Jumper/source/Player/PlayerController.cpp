@@ -8,6 +8,7 @@
 namespace Player
 {
 	using namespace Global;
+	using namespace Event;
 	using namespace Level;
 	using namespace Sound;
 
@@ -29,7 +30,7 @@ namespace Player
 
 		event_service = ServiceLocator::getInstance()->getEventService();
 
-		takeDamage();
+		resetPlayer();
 	}
 
 	void PlayerController::update()

@@ -1,11 +1,9 @@
 #pragma once
 #include "LevelData.h"
-#include"../../header/Level/LevelConfiguration.h"
+#include "LevelConfiguration.h"
 
 namespace Level
 {
-	//struct BlockType {};
-
 	struct BoxDimensions
 	{
 		float box_width;
@@ -16,7 +14,8 @@ namespace Level
 		float bottom_offset = 200.f;
 	};
 
-	class LevelModel {
+	class LevelModel
+	{
 	private:
 		const int number_of_level = LevelConfiguration::NUMBER_OF_LEVELS;
 		LevelConfiguration level_configuration;

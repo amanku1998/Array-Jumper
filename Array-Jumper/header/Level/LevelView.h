@@ -1,7 +1,8 @@
 #pragma once
+#include "LevelModel.h"
+#include "LevelData.h"
 #include "LevelController.h"
 #include "../../header/UI/UIElement/ImageView.h"
-
 
 namespace Level
 {
@@ -28,7 +29,15 @@ namespace Level
 		void initializeImages();
 		void updateImages();
 		void drawLevel();
+		void drawBox(sf::Vector2f position);
+		void drawBoxValue(sf::Vector2f position, BlockType box_value);
 		void deleteImages();
+
+		void calculateBoxDimensions();
+		void calculateBoxWidthHeight();
+		void calculateBoxSpacing();
+		sf::Vector2f calculateBoxPosition(int index);
+		UI::UIElement::ImageView* getBoxOverlayImage(BlockType block_type);
 
 	public:
 
@@ -38,15 +47,6 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
-
-		void calculateBoxDimensions();
-		void calculateBoxWidthHeight();
-		void calculateBoxSpacing();
-		sf::Vector2f calculateBoxPosition(int index);
-
-		UI::UIElement::ImageView* getBoxOverlayImage(BlockType block_type);
-		void drawBox(sf::Vector2f position);
-		void drawBoxValue(sf::Vector2f position, BlockType box_value);
 
 		BoxDimensions getBoxDimensions();
 	};

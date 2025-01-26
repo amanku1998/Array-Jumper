@@ -1,5 +1,4 @@
 #pragma once
-//#include"../../header/Player/PlayerModel.h"
 #include"../../header/Player/MovementDirection.h"
 #include"../../header/Event/EventService.h"
 #include"../../header/Level/BlockType.h"
@@ -22,7 +21,7 @@ namespace Player
 		PlayerView* player_view;
 
 		EventService* event_service;
-		LevelModel current_level_data; // Assumes this is already defined
+		//LevelModel current_level_data; // Assumes this is already defined
 
 		void destroy();
 

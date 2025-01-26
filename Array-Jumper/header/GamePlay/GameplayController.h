@@ -8,6 +8,15 @@ namespace Gameplay
 	class GameplayController
 	{
 	private:
+		bool isObstacle(BlockType value);
+		bool isEndBlock(Level::BlockType value);
+		void processObstacle();
+		void processEndBlock();
+
+		bool isLastLevel();
+		void loadNextLevel();
+		void gameWon();
+		void gameOver();
 
 	public:
 
@@ -15,12 +24,8 @@ namespace Gameplay
 		void update();
 		void render();
 
-		void processObstacle();
-		void processEndBlock();
+		void startGame();
 		void onPositionChanged(int position);
-		bool isObstacle(BlockType value);
-		bool isEndBlock(Level::BlockType value);
-		void gameOver();
 		void onDeath();
 	};
 }

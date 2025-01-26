@@ -1,6 +1,4 @@
 #pragma once
-//#include "../../header/Level/LevelController.h"
-
 #include "BlockType.h"
 
 namespace Level
@@ -28,6 +26,6 @@ namespace Level
 		void loadNextLevel();
 		int getCurrentLevelNumber();
 
-		void reset();
+		void resetLevels();
 	};
 }

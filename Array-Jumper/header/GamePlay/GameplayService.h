@@ -1,5 +1,5 @@
 #pragma once
-#include "../../header/Gameplay/GameplayController.h"
+#include "GameplayController.h"
 
 namespace Gameplay
 {
@@ -18,6 +18,7 @@ namespace Gameplay
 		void update();
 		void render();
 
+		void startGame();
 		void onPositionChanged(int position);
 		void onDeath();
 	};

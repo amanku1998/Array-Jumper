@@ -28,15 +28,6 @@ namespace Player
 		player_controller->render();
 	}
 
-	void PlayerService::destroy()
-	{
-		if (player_controller)
-		{
-			delete player_controller;
-			player_controller = nullptr;
-		}
-	}
-
 	void PlayerService::takeDamage()
 	{
 		player_controller->takeDamage();
@@ -47,8 +38,18 @@ namespace Player
 		player_controller->resetPlayer();
 	}
 
+	void PlayerService::resetPlayer()
+	{
+		player_controller->resetPlayer();
+	}
+
 	int PlayerService::getCurrentLives()
 	{
 		return player_controller->getCurrentLives();
+	}
+
+	void PlayerService::destroy()
+	{
+		delete(player_controller);
 	}
 }

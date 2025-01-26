@@ -1,4 +1,5 @@
 #include "../../header/Level/LevelModel.h"
+#include "../../header/Level/LevelConfiguration.h"
 
 namespace Level
 {

@@ -4,8 +4,6 @@
 #include "../../header/Global/ServiceLocator.h"
 #include "../../header/UI/UIElement/TextView.h"
 
-
-
 namespace UI
 {
     using namespace Main;
@@ -23,6 +21,7 @@ namespace UI
         main_menu_ui_controller = nullptr;
         credits_screen_ui_controller = nullptr;
         instructions_ui_controller = nullptr;
+        gameplay_ui_controller = nullptr;
 
         createControllers();
     }

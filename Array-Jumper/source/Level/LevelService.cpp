@@ -50,7 +50,7 @@ namespace Level
 		return level_controller->getCurrentLevelNumber();
 	}
 
-	void LevelService::reset()
+	void LevelService::resetLevels()
 	{
 		level_controller->reset();
 	}

@@ -97,16 +97,17 @@ namespace Level
 		}
 	}
 
-	void LevelView::deleteImages()
+	void LevelView::drawBox(sf::Vector2f position)
 	{
-		delete(background_image);
-		delete(box_image);
-		delete(target_overlay_image);
-		delete(letter_one_overlay_image);
-		delete(letter_two_overlay_image);
-		delete(letter_three_overlay_image);
-		delete(obstacle_one_overlay_image);
-		delete(obstacle_two_overlay_image);
+		box_image->setPosition(position);
+		box_image->render();
+	}
+
+	void LevelView::drawBoxValue(sf::Vector2f position, BlockType box_value)
+	{
+		ImageView* image = getBoxOverlayImage(box_value);
+		image->setPosition(position);
+		image->render();
 	}
 
 	void LevelView::calculateBoxDimensions()
@@ -170,16 +171,15 @@ namespace Level
 		return nullptr;
 	}
 
-	void LevelView::drawBox(sf::Vector2f position)
+	void LevelView::deleteImages()
 	{
-		box_image->setPosition(position);
-		box_image->render();
-	}
-
-	void LevelView::drawBoxValue(sf::Vector2f position, BlockType box_value)
-	{
-		ImageView* image = getBoxOverlayImage(box_value);
-		image->setPosition(position);
-		image->render();
+		delete(background_image);
+		delete(box_image);
+		delete(target_overlay_image);
+		delete(letter_one_overlay_image);
+		delete(letter_two_overlay_image);
+		delete(letter_three_overlay_image);
+		delete(obstacle_one_overlay_image);
+		delete(obstacle_two_overlay_image);
 	}
 }

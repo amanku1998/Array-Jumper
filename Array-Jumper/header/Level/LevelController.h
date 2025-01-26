@@ -4,6 +4,7 @@
 namespace Level
 {
 	class LevelView;
+	class LevelModel;
 
 	class LevelController {
 	private:
