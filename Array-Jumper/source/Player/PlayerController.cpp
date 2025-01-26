@@ -93,7 +93,7 @@ namespace Player
 
 	bool PlayerController::isPositionInBound(int targetPosition)
 	{
-		if (targetPosition >= 0 && targetPosition < LevelData::number_of_boxes)
+		if (targetPosition >= 0 && targetPosition < LevelData::NUMBER_OF_BOXES)
 			return true;
 		return false;
 	}

@@ -87,7 +87,7 @@ namespace Level
 	{
 		background_image->render();
 
-		for (int i = 0; i < LevelData::number_of_boxes; ++i)
+		for (int i = 0; i < LevelData::NUMBER_OF_BOXES  ; ++i)
 		{
 			sf::Vector2f position = calculateBoxPosition(i);
 			BlockType blockTypeToDraw = level_controller->getCurrentBoxValue(i);
@@ -120,7 +120,7 @@ namespace Level
 	void LevelView::calculateBoxWidthHeight()
 	{
 		float screenWidth = static_cast<float>(game_window->getSize().x);
-		int numBoxes = LevelData::number_of_boxes;
+		int numBoxes = LevelData::NUMBER_OF_BOXES ;
 
 		//Each Box has a Gap on it's left, 1 extra gap for last block's right side
 		int numGaps = numBoxes + 1;
